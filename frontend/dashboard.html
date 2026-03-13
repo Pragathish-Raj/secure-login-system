@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login System - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container dashboard-container">
+        <h2>Dashboard</h2>
+        <p class="subtitle">Welcome to your secure area</p>
+        
+        <div id="data" style="margin-top: 1rem; text-align: center;">
+            <p>Loading your profile data...</p>
+        </div>
+
+        <button onclick="logout()" class="btn-danger" style="margin-top: 2rem;">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Automatically load dashboard data when the page opens
+        window.addEventListener('DOMContentLoaded', loadDashboard);
+
+        function logout() {
+            localStorage.removeItem("token");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

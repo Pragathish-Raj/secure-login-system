@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login System - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Sign in to your secure account</p>
+        
+        <form id="loginForm" onsubmit="login(event)">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="john.doe@example.com">
+                <span class="error-msg" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••">
+                <span class="error-msg" id="passwordError"></span>
+            </div>
+            
+            <div style="text-align: right; margin-bottom: 15px;">
+                <a href="forgot-password.html" class="link-text" style="font-size: 0.9rem; text-decoration: none;">Forgot Password?</a>
+            </div>
+
+            <button type="submit" id="loginBtn">Login</button>
+            <div id="generalError" class="error-msg" style="text-align: center; margin-top: 5px;"></div>
+        </form>
+
+        <p class="link-text">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
